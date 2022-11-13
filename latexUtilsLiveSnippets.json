@@ -876,6 +876,13 @@
         "triggerWhenComplete": true
     },
     {
+        "prefix": "(\\B,rAlg)$",
+        "body": "\\begin{align}\n\\label{eq:$$1}\n    $$2\n\\end{align}",
+        "mode": "text",
+        "description": "align environment with label",
+        "triggerWhenComplete": true
+    },
+    {
         "prefix": "(\\B,alg)$",
         "body": "\\begin{align*}\n    $$1\n\\end{align*}",
         "mode": "text",
@@ -1167,7 +1174,7 @@
     },
     {
         "prefix": "(\\B,sub)$",
-        "body": "\\subsection{$$1}\n\\label{sec:$$2}\n$$3",
+        "body": "\\subsection{$$1}\n\\label{subsec:$$2}\n$$3",
         "mode": "text",
         "description": "subsection",
         "triggerWhenComplete": true
@@ -1177,13 +1184,21 @@
         "body": "$1\\mathbb{$$2}",
         "mode": "maths",
         "description": "mathbb",
-        "triggerWhenComplete": true
+        "triggerWhenComplete": true,
+        "priority": 3
     },
     {
         "prefix": "([A-Za-z}\\)\\]])(_txt)$",
         "body": "$1_{\\text{$$2}}",
         "mode": "maths",
         "description": "subscript text",
+        "triggerWhenComplete": true
+    },
+    {
+        "prefix": "(\\B,rf)$",
+        "body": "\\ref{$$1}",
+        "mode": "text",
+        "description": "reference",
         "triggerWhenComplete": true
     }
 ]
