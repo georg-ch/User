@@ -925,11 +925,12 @@
         "triggerWhenComplete": true
     },
     {
-        "prefix": "(\\bmk)$",
+        "prefix": "(\\B,m)$",
         "body": "\\( $$1 \\)",
         "mode": "text",
         "description": "inline math mode",
-        "triggerWhenComplete": true
+        "triggerWhenComplete": true,
+        "priority": 10
     },
     {
         "prefix": "(\\bfat)$",
@@ -1160,7 +1161,7 @@
         "triggerWhenComplete": true
     },
     {
-        "prefix": "(\\B,mathdoc)$",
+        "prefix": "(\\B,doc)$",
         "body": "\\documentclass{article}\n\\usepackage{amsmath}\n\\usepackage{soul}\n\\usepackage{graphicx}\n\\usepackage{amssymb}\n\\usepackage{listings}\n\\usepackage{enumitem}\n\\title{$$1}\n\\author{Georg Chechelnizki}\n\\begin{document}\n\\maketitle\n$$2\n\\end{document}",
         "mode": "text",
         "description": "maths document",
