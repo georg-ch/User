@@ -948,7 +948,7 @@
         "priority": 1
     },
     {
-        "prefix": "(^|[^\\\\])lrr$",
+        "prefix": "(^|[^\\\\])lrd$",
         "body": "$1\\left($$2\\right)",
         "mode": "maths",
         "description": "left and right parentheses",
