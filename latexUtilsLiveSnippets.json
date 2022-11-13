@@ -955,6 +955,7 @@
     },
     {
         "prefix": "(^|[^\\\\])lrn$",
+        "body": "$1\\left|$$2\\right|",
         "mode": "maths",
         "description": "left and right vertical bars",
         "triggerWhenComplete": true
